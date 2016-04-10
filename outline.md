@@ -70,6 +70,15 @@ $ git push                  ## Existing remote branch
 $ git branch feature/github-integration
 $ git checkout -b feature/github-integration
 ```
+ * View state of working repo
+```
+$ git status
+```
+ * View history
+```
+$ gitk
+$ git log --graph --oneline --decorate
+```
 
 ### Branches
  * As an abstraction, we usually think of branches as a separate timelines that contain separate versions of the code base
