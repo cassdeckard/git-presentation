@@ -65,11 +65,6 @@ $ git commit -v
 $ git push -u origin HEAD   ## New remote branch
 $ git push                  ## Existing remote branch
 ```
- * Create a new local branch
-```
-$ git branch feature/github-integration
-$ git checkout -b feature/github-integration
-```
  * View state of working repo
 ```
 $ git status
@@ -84,6 +79,20 @@ $ git log --graph --oneline --decorate
  * As an abstraction, we usually think of branches as a separate timelines that contain separate versions of the code base
  * With Git it is often more useful to ditch the abstraction and think about how branches are implemented while working with them
  * **Key insight**: a named branch is nothing more than an alias or reference to a single commit
+
+#### How to
+ * Create a new local branch
+```
+$ git branch feature/github-integration
+$ git checkout -b feature/github-integration
+```
+ * Merge `feature/foo` into `master`
+```
+$ git checkout master
+$ git merge feature/foo
+```
+
+<img src="todo.png"/> TODO: Add illustration
 
 ### Commits
 
