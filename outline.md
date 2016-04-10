@@ -116,10 +116,12 @@ $ git merge feature/foo
  systems.
  * However, there are some key differences:
     * With DVCS like Git, `commit` is a purely _local_ operation
-    * In fact, all operations on commits and branches happen locally
     * Rather than a centralized server, a remote repo is simply a different
-      copy of your local repo which you sync with commands like
-      `fetch` and `push`
+    copy of your local repo which you sync with commands like
+    `fetch` and `push`
+    * In fact, all operations on commits and branches happen locally, then
+    are synced with one or more remotes later.
+ * Most of this presentation is going to cover local operations
 
 ### TODO
  * HTTPS vs SSH
