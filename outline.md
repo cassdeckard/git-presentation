@@ -75,6 +75,31 @@ $ gitk
 $ git log --graph --oneline --decorate
 ```
 
+### Remotes
+ * If you are used to centralized VCS systems like CVS or Subversion, it is
+ tempting to think of a remote as equivalent to the remote server under such
+ systems.
+ * However, there are some key differences:
+    * With DVCS like Git, `commit` is a purely _local_ operation
+    * Rather than a centralized server, a remote repo is simply a different
+    copy of your local repo which you sync with commands like
+    `fetch` and `push`
+    * In fact, all operations on commits and branches happen locally, then
+    are synced with one or more remotes later.
+ * Most of this presentation is going to cover local operations
+
+### Commits
+ * As an abstraction, a commit represents a distinct state of all of the files
+ in your codebase that are tracked by Git
+ * Git does all kinds of magic under the hood to make commit operations cheap
+ and fast.
+    * It is _not_ literally saving a new snapshot of your codebase in each
+    commit
+    * As another abstraction, it can be useful to think of each commit as a
+    _delta_ or _patch_ of the previous codebase state. Even though this also
+    isn't quite what Git is really doing under the hood, much of its CLI uses
+    this metaphor.
+
 ### Branches
  * As an abstraction, we usually think of branches as a separate timelines that
  contain separate versions of the code base
@@ -98,30 +123,7 @@ $ git merge feature/foo
 
 <img src="todo.png"/> TODO: Add illustration
 
-### Commits
- * As an abstraction, a commit represents a distinct state of all of the files
- in your codebase that are tracked by Git
- * Git does all kinds of magic under the hood to make commit operations cheap
- and fast.
-    * It is _not_ literally saving a new snapshot of your codebase in each
-    commit
-    * As another abstraction, it can be useful to think of each commit as a
-    _delta_ or _patch_ of the previous codebase state. Even though this also
-    isn't quite what Git is really doing under the hood, much of its CLI uses
-    this metaphor.
 
-### Remotes
- * If you are used to centralized VCS systems like CVS or Subversion, it is
- tempting to think of a remote as equivalent to the remote server under such
- systems.
- * However, there are some key differences:
-    * With DVCS like Git, `commit` is a purely _local_ operation
-    * Rather than a centralized server, a remote repo is simply a different
-    copy of your local repo which you sync with commands like
-    `fetch` and `push`
-    * In fact, all operations on commits and branches happen locally, then
-    are synced with one or more remotes later.
- * Most of this presentation is going to cover local operations
 
 ### TODO
  * HTTPS vs SSH
