@@ -21,6 +21,7 @@ The Basics
 ##### Pros
  * Distributed
    * Super easy to use locally, worry about pushing to a remote later (or never)
+   * Add multiple remotes
  * Widely used
    * GitHub, GitLab
  * Very powerful and fast
@@ -31,6 +32,44 @@ The Basics
  * Inconsistent, confusing command-line UI
    * http://stevelosh.com/blog/2013/04/git-koans/
 
+### Workflow basics
+ * Initialize a local repo
+```
+$ git init
+```
+ * Add a remote
+```
+$ git remote add https://github.com/mattdeckard/git-presentation.git
+$ git remote add git@github.com:mattdeckard/git-presentation.git
+```
+ * Fetch changes from remote
+```
+$ git fetch
+```
+ * Pull changes from remote into checked out local branch
+```
+$ git pull
+```
+ * Add local changes to index
+```
+$ git add ./outline.md
+$ git add .
+```
+ * Commit indexed changes to local branch
+```
+$ git commit -m"Add workflow basics section"
+$ git commit -v
+```
+ * Push local commits to remote branch
+```
+$ git push -u origin HEAD   ## New remote branch
+$ git push                  ## Existing remote branch
+```
+ * Create a new local branch
+```
+$ git branch feature/github-integration
+$ git checkout -b feature/github-integration
+```
 
 ### Branches
  * As an abstraction, we usually think of branches as a separate timelines that contain separate versions of the code base
@@ -38,3 +77,7 @@ The Basics
  * **Key insight**: a named branch is nothing more than an alias or reference to a single commit
 
 ### Commits
+
+
+### TODO
+ * HTTPS vs SSH
