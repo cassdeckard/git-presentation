@@ -100,6 +100,27 @@ $ git log --graph --oneline --decorate
     isn't quite what Git is really doing under the hood, much of its CLI uses
     this metaphor.
 
+### The index
+ * Git has the concept of the "index". Its CLI and documentation provides an
+ array of mixed metaphors to describe this concept
+    * The index / adding to the index / indexed
+    * The stage / staging / staged
+    * The cache / cached
+ * In day-to-day usage, all you need to know is that versions of a file in your
+ repo _must_ be in the index before they can be included in a commit
+ * The typical way to add versions of files to your index is through the `add`
+ command:
+```
+$ git add src/bundle.js    ## Add a single file
+$ git add .                ## Add all files in working dir
+```
+ * One shortcut to add _and_ commit all changes to tracked files is:
+```
+$ git commit -a
+```
+    * Note this will only add changes to files that are already tracked by Git.
+    It will not add completely new files.
+
 ### Branches
  * As an abstraction, we usually think of branches as a separate timelines that
  contain separate versions of the code base
@@ -126,4 +147,4 @@ $ git merge feature/foo
 
 
 ### TODO
- * HTTPS vs SSH
+ * HTTPS vs SSH - maybe, but not necessarily
