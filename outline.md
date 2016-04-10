@@ -2,6 +2,10 @@ Git
 ===
 An introduction
 
+Presented by Matt Deckard
+
+Sponsored by WWT Asynchrony Labs
+
 The Basics
 ----------
 
