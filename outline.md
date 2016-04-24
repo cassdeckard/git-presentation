@@ -144,7 +144,26 @@ $ git merge feature/foo
 
 ![TODO](todo.png) TODO: Add illustration
 
+### Merging
 
+### Rebasing
+
+### Checkout versus Reset
 
 ### TODO
  * HTTPS vs SSH - maybe, but not necessarily
+ * Talk about DAGs, graph theory
+ * Tracking branches
+ * Patches
+ * In Commit section, talk about how it moves the branch head
+ * Talk about head
+    * With branch checked out
+    * In detached head state
+ * Foreign language metaphor?
+ * Plumbing / porcelain metaphor
+ * SHAs
+ * Show where branches live in .git dir?
+ * Orphans / unreachable / lost
+   * reflog
+ * Stash
+ * Bisect
