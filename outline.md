@@ -142,7 +142,7 @@ $ git checkout master
 $ git merge feature/foo
 ```
 
-<img src="todo.png"/> TODO: Add illustration
+![TODO](todo.png) TODO: Add illustration
 
 
 
