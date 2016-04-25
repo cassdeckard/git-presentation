@@ -126,9 +126,9 @@ $ git commit -a
  contain separate versions of the code base
  * It is often more useful to ditch the abstraction and think about how branches
  are implemented while working with them
-    * This is part of what operations on branches very cheap and fast
  * **Key insight**: a named branch is nothing more than an alias or reference to
  a single commit
+    * This is part of what operations on branches very cheap and fast
 
 #### How to
  * Create a new local branch
