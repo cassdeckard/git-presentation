@@ -201,6 +201,9 @@ $ git branch -u origin/foo
  branch head to the new cherry-picked location.
  * Rebasing locally is just fine. Rebasing and force pushing branches others
  may be working with should not be done lightly.
+ * And by the way, the command for this is `git rebase`
+ * Check out interactive rebase with `git rebase -i`
+     * Reorder, reword, delete or squash commits!
 
 ### Checkout versus Reset
 You've surely used `checkout` to switch between branches and undo uncommitted
@@ -243,12 +246,18 @@ But what do these commands _actually do_?
 
 ### Patches
  * Patch versions of commands (add, checkout, reset, stash)
+ * Act on only select parts of files
+ * Can even edit the patch as you go!
 
 ### Orphans
+ * Commits that are unreachable from any local or remote branch, or tag
  * Garbage collection
  * The reflog
 
 ### Stash
+ * Save your work without worrying about adding, committing, what branch it is on
+ * Works like a stack
+ * `pop` will not actually pop the stack if there is a conflict
 
 ### Finding things in history
  * `git blame`
